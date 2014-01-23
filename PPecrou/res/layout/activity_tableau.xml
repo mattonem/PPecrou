@@ -46,11 +46,6 @@
 	                android:id="@+id/cell111"
 	                style="@style/frag2Col"
 	                android:text="@string/nothing" />
-
-	            <TextView
-	                android:id="@+id/cell112"
-	                style="@style/frag2Col"
-	                android:text="@string/nothing" />
 	        </TableRow>
 
 	        <TableRow style="@style/frag2TableRow" >

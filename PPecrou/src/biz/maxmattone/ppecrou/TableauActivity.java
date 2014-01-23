@@ -4,15 +4,18 @@ import java.text.DecimalFormat;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.TextView;
 
 public class TableauActivity extends Activity {
 
 	private DecimalFormat decimalFormat;
-	private final String stateD0 = "D0";
+	private static final String STATE_D0 = "D0";
+	private static final String STATE_T = "T";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +31,7 @@ public class TableauActivity extends Activity {
 			
 			@Override
 			public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-				
+				updateT(Float.parseFloat(v.getText().toString()));
 				return false;
 			}
 		});
@@ -44,6 +47,36 @@ public class TableauActivity extends Activity {
 		});
 	}
 	
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.tableau, menu);
+		return true;
+	}
+	
+	@Override
+	protected void onSaveInstanceState(Bundle outState) {
+		EditText inputD0 = (EditText) findViewById(R.id.inputD0);
+		EditText inputT = (EditText) findViewById(R.id.inputT);
+		Log.d("test", "msg:"+inputD0.getText().toString()+"stop"+inputD0.getText().toString().matches(""));
+		Log.d("test", "msg:"+inputD0.getText().toString()+"stop"+inputD0.getText().toString().matches(""));
+		
+		if(!inputD0.getText().toString().matches(""))
+			outState.putFloat(STATE_D0, Float.parseFloat(inputD0.getText().toString()));
+		if(!inputT.getText().toString().matches(""))
+			outState.putFloat(STATE_T, Float.parseFloat(inputT.getText().toString()));
+		super.onSaveInstanceState(outState);
+	}
+	
+	@Override
+	protected void onRestoreInstanceState(Bundle savedInstanceState) {
+		if(savedInstanceState.getFloat(STATE_D0) != 0 )	
+			updateD0(savedInstanceState.getFloat(STATE_D0));
+		if(savedInstanceState.getFloat(STATE_T) != 0 )	
+			updateT(savedInstanceState.getFloat(STATE_T));
+		super.onRestoreInstanceState(savedInstanceState);
+	}
+
 	public void updateD0(float d0){
 		TextView europincemin = (TextView) findViewById(R.id.cell111);
 		TextView cmpincemin = (TextView) findViewById(R.id.cell121);
@@ -68,25 +101,39 @@ public class TableauActivity extends Activity {
 		cmpasmax.setText(decimalFormat.format(10*d0));
 	}
 
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.tableau, menu);
-		return true;
+	private void updateT(float t) {
+		TextView cmpincemaxhr = (TextView) findViewById(R.id.cell132);
+		TextView europincemax = (TextView) findViewById(R.id.cell141);
+		TextView europincemaxhr = (TextView) findViewById(R.id.cell142);
+		
+		cmpincemaxhr.setText(decimalFormat.format(6*t));
+		europincemax.setText(decimalFormat.format(4*t+40));
+		europincemaxhr.setText(decimalFormat.format(8*t)+" ou 125");
+		
+		TextView cmpasmaxhr = (TextView) findViewById(R.id.cell232);
+		TextView europasmax = (TextView) findViewById(R.id.cell241);
+		TextView europasmaxhr = (TextView) findViewById(R.id.cell242);
+		
+		cmpasmaxhr.setText(decimalFormat.format(15*t));
+		europasmax.setText(decimalFormat.format(14*t)+" ou 200");
+		europasmaxhr.setText(decimalFormat.format(4*t)+" ou 200");
 	}
 	
 	@Override
-	protected void onSaveInstanceState(Bundle outState) {
-		EditText inputD0 = (EditText) findViewById(R.id.inputD0);
-		outState.putFloat(stateD0, Float.parseFloat(inputD0.getText().toString()));
-		super.onSaveInstanceState(outState);
-	}
-	
-	@Override
-	protected void onRestoreInstanceState(Bundle savedInstanceState) {
-		if(savedInstanceState.getFloat(stateD0) != 0 )	
-			updateD0(savedInstanceState.getFloat(stateD0));
-		super.onRestoreInstanceState(savedInstanceState);
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+		case R.id.actualise:
+			EditText inputD0 = (EditText) findViewById(R.id.inputD0);
+			EditText inputT = (EditText) findViewById(R.id.inputT);
+			inputD0.setText(new String());
+			inputT.setText(new String());
+			recreate();
+			break;
+
+		default:
+			break;
+		}
+		return super.onOptionsItemSelected(item);
 	}
 	
 	
