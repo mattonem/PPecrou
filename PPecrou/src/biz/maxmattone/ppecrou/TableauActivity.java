@@ -31,7 +31,8 @@ public class TableauActivity extends Activity {
 			
 			@Override
 			public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-				updateT(Float.parseFloat(v.getText().toString()));
+				if(!v.getText().toString().matches(""))
+					updateT(Float.parseFloat(v.getText().toString()));
 				return false;
 			}
 		});
@@ -40,7 +41,8 @@ public class TableauActivity extends Activity {
 			
 			@Override
 			public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-				updateD0(Float.parseFloat(v.getText().toString()));
+				if(!v.getText().toString().matches(""))
+					updateD0(Float.parseFloat(v.getText().toString()));
 				
 				return false;
 			}
@@ -121,13 +123,24 @@ public class TableauActivity extends Activity {
 	
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
+		EditText inputD0;
+		EditText inputT;
 		switch (item.getItemId()) {
-		case R.id.actualise:
-			EditText inputD0 = (EditText) findViewById(R.id.inputD0);
-			EditText inputT = (EditText) findViewById(R.id.inputT);
+		case R.id.reset_action:
+			inputD0 = (EditText) findViewById(R.id.inputD0);
+			inputT = (EditText) findViewById(R.id.inputT);
 			inputD0.setText(new String());
 			inputT.setText(new String());
 			recreate();
+			break;
+		case R.id.actualise_action:
+			inputD0 = (EditText) findViewById(R.id.inputD0);
+			inputT = (EditText) findViewById(R.id.inputT);
+			
+			if(!inputD0.getText().toString().matches(""))
+				updateD0(Float.parseFloat(inputD0.getText().toString()));
+			if(!inputT.getText().toString().matches(""))
+				updateT(Float.parseFloat(inputT.getText().toString()));
 			break;
 
 		default:

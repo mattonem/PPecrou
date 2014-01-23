@@ -4,7 +4,8 @@
     <string name="nothing">no</string>
 	<string name="app_name">PPecrou</string>
     <string name="action_settings">Settings</string>
-    <string name="action_actualise">Actualiser</string>
+    <string name="action_reset">Reset</string>
+    <string name="action_actualise">Actualise</string>
     <string name="hello_world">Hello world!</string>
     <string name="pince">Pince</string>
     <string name="pas">Pas</string>

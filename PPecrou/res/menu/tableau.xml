@@ -1,7 +1,13 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
-
+ 
     <item
-        android:id="@+id/actualise"
+        android:id="@+id/reset_action"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="@string/action_reset"/>
+    
+    <item
+        android:id="@+id/actualise_action"
         android:orderInCategory="100"
         android:showAsAction="always"
         android:title="@string/action_actualise"/>
