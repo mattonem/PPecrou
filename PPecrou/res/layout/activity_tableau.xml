@@ -1,35 +1,226 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".TableauActivity" >
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="fill_parent">
 
-    <TableLayout style="@style/frag2TableLayout" > 
-	    <TableRow style="@style/frag2TableRow"> 
-	        <TextView style="@style/frag2HeaderCol" android:text="Credit"/> 
-	        <TextView style="@style/frag2HeaderCol" android:text="Debit"/> 
-	        <TextView style="@style/frag2HeaderCol" android:text="Debit"/> 
-	    </TableRow> 
-	
-	    <TableRow style="@style/frag2TableRow"> 
-	        <TextView style="@style/frag2Col" android:text="124"/> 
-	        <TextView style="@style/frag2Col" android:text="-125"/> 
-	        <TextView style="@style/frag2Col" android:text="-125"/> 
-	    </TableRow> 
-	
-	    <TableRow style="@style/frag2TableRow"> 
-	        <TextView style="@style/frag2Col" android:text="345"/> 
-	        <TextView style="@style/frag2Col" android:text="-120"/> 
-	    </TableRow> 
-	
-	    <TableRow style="@style/frag2TableRow"> 
-	        <TextView style="@style/frag2Col" android:text="245"/> 
-	        <TextView style="@style/frag2Col" android:text="-120"/> 
-	    </TableRow>
-	</TableLayout>
+	<RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:paddingBottom="@dimen/activity_vertical_margin"
+	    android:paddingLeft="@dimen/activity_horizontal_margin"
+	    android:paddingRight="@dimen/activity_horizontal_margin"
+	    android:paddingTop="@dimen/activity_vertical_margin" >
 
-</RelativeLayout>
+	    <TableLayout
+	        android:id="@+id/tableLayout1"
+	        style="@style/frag2TableLayout" >
+
+	        <TableRow style="@style/frag2TableRow" >
+
+	            <Space
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content" />
+
+	            <TextView
+	                style="@style/frag2HeaderCol"
+	                android:text="@string/boulonordinaire" />
+
+	            <TextView
+	                style="@style/frag2HeaderCol"
+	                android:text="@string/boulonHR" />
+	        </TableRow>
+
+	        <TableRow style="@style/frag2TableRow" >
+
+	            <TextView
+	                style="@style/frag2HeaderCol"
+	                android:text="@string/eurocode" />
+
+	            <TextView
+	                style="@style/frag2Col"
+	                android:text="@string/nothing" />
+
+	            <TextView
+	                style="@style/frag2Col"
+	                android:text="@string/nothing" />
+	        </TableRow>
+
+	        <TableRow style="@style/frag2TableRow" >
+
+	            <TextView
+	                style="@style/frag2HeaderCol"
+	                android:text="@string/cm66" />
+
+	            <TextView
+	                style="@style/frag2Col"
+	                android:text="@string/nothing" />
+
+	            <TextView
+	                style="@style/frag2Col"
+	                android:text="@string/nothing" />
+	        </TableRow>
+
+	        <Space
+	            android:layout_width="wrap_content"
+	            android:layout_height="3dp" />
+
+	        <TableRow style="@style/frag2TableRow" >
+
+	            <TextView
+	                style="@style/frag2HeaderCol"
+	                android:text="@string/cm66" />
+
+	            <TextView
+	                style="@style/frag2Col"
+	                android:text="@string/nothing" />
+
+	            <TextView
+	                style="@style/frag2Col"
+	                android:text="@string/nothing" />
+	        </TableRow>
+
+	        <TableRow style="@style/frag2TableRow" >
+
+	            <TextView
+	                style="@style/frag2HeaderCol"
+	                android:text="@string/eurocode" />
+
+	            <TextView
+	                style="@style/frag2Col"
+	                android:text="@string/nothing" />
+
+	            <TextView
+	                style="@style/frag2Col"
+	                android:text="@string/nothing" />
+	        </TableRow>
+	    </TableLayout>
+
+	    <TextView
+	        android:id="@+id/textView1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_below="@+id/tableLayout1"
+	        android:text="@string/d0"
+	        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+	    <EditText
+	        android:id="@+id/inputD0"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignTop="@id/textView1"
+	        android:layout_toRightOf="@+id/textView1"
+	        android:ems="10"
+	        android:inputType="numberDecimal" >
+
+		</EditText>
+	    
+	    <TextView
+	        android:id="@+id/textView2"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_below="@+id/textView1"
+	        android:text="@string/t"
+	        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+	     <EditText
+	         android:id="@+id/inputT"
+	         android:layout_width="wrap_content"
+	         android:layout_height="wrap_content"
+	         android:layout_alignLeft="@id/inputD0"
+	         android:layout_alignTop="@+id/textView2"
+	         android:ems="10"
+	         android:inputType="numberDecimal" />
+
+	    <TableLayout
+	        android:id="@+id/TableLayout01"
+	        style="@style/frag2TableLayout"
+	        android:layout_alignLeft="@+id/textView2"
+	        android:layout_below="@+id/inputT" >
+
+	        <TableRow style="@style/frag2TableRow" >
+
+	            <Space
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content" />
+
+	            <TextView
+	                style="@style/frag2HeaderCol"
+	                android:text="@string/boulonordinaire" />
+
+	            <TextView
+	                style="@style/frag2HeaderCol"
+	                android:text="@string/boulonHR" />
+	        </TableRow>
+
+	        <TableRow style="@style/frag2TableRow" >
+
+	            <TextView
+	                style="@style/frag2HeaderCol"
+	                android:text="@string/eurocode" />
+
+	            <TextView
+	                style="@style/frag2Col"
+	                android:text="@string/nothing" />
+
+	            <TextView
+	                style="@style/frag2Col"
+	                android:text="@string/nothing" />
+	        </TableRow>
+
+	        <TableRow style="@style/frag2TableRow" >
+
+	            <TextView
+	                style="@style/frag2HeaderCol"
+	                android:text="@string/cm66" />
+
+	            <TextView
+	                style="@style/frag2Col"
+	                android:text="@string/nothing" />
+
+	            <TextView
+	                style="@style/frag2Col"
+	                android:text="@string/nothing" />
+	        </TableRow>
+
+	        <Space
+	            android:layout_width="wrap_content"
+	            android:layout_height="3dp" />
+
+	        <TableRow style="@style/frag2TableRow" >
+
+	            <TextView
+	                style="@style/frag2HeaderCol"
+	                android:text="@string/cm66" />
+
+	            <TextView
+	                style="@style/frag2Col"
+	                android:text="@string/nothing" />
+
+	            <TextView
+	                style="@style/frag2Col"
+	                android:text="@string/nothing" />
+	        </TableRow>
+
+	        <TableRow style="@style/frag2TableRow" >
+
+	            <TextView
+	                style="@style/frag2HeaderCol"
+	                android:text="@string/eurocode" />
+
+	            <TextView
+	                style="@style/frag2Col"
+	                android:text="@string/nothing" />
+
+	            <TextView
+	                style="@style/frag2Col"
+	                android:text="@string/nothing" />
+	        </TableRow>
+	    </TableLayout>
+
+	   
+
+	  
+
+	</RelativeLayout>
+
+</ScrollView>

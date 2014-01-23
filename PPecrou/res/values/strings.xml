@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">PPecrou</string>
+    <string name="nothing">no</string>
+	<string name="app_name">PPecrou</string>
     <string name="action_settings">Settings</string>
+    <string name="action_actualise">Actualiser</string>
     <string name="hello_world">Hello world!</string>
+    <string name="pince">Pince</string>
+    <string name="pas">Pas</string>
+    <string name="eurocode">Euro Code</string>
+    <string name="cm66">CM66</string>
+    <string name="boulonordinaire">Boulon Ordinaire</string>
+    <string name="boulonHR">Boulon HR</string>
+    <string name="d0">d0</string>
+    <string name="t">t</string>
 
 </resources>

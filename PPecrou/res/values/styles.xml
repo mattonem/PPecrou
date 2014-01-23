@@ -19,7 +19,7 @@
     
     <style name="defaultTextView" parent="@android:style/TextAppearance.Medium"> 
         <item name="android:layout_width">match_parent</item> 
-        <item name="android:layout_height">wrap_content</item> 
+        <item name="android:layout_height">match_parent</item> 
     </style> 
     <style name="frag1TableLayout"> 
         <item name="android:layout_width">match_parent</item> 
@@ -53,6 +53,7 @@
     </style>
     <style name="frag2HeaderCol" parent="frag2Col">
         <item name="android:textStyle">bold</item>
+        <item name="android:layout_height">wrap_content</item> 
     </style>
     
     
