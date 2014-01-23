@@ -9,9 +9,17 @@
 	    android:paddingRight="@dimen/activity_horizontal_margin"
 	    android:paddingTop="@dimen/activity_vertical_margin" >
 
+		<TextView
+		    android:id="@+id/textView3"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="@string/pince"
+		    android:textAppearance="?android:attr/textAppearanceLarge" />
+
 	    <TableLayout
 	        android:id="@+id/tableLayout1"
-	        style="@style/frag2TableLayout" >
+	        style="@style/frag2TableLayout"
+	        android:layout_below="@id/textView3" >
 
 	        <TableRow style="@style/frag2TableRow" >
 
@@ -131,11 +139,19 @@
 	         android:ems="10"
 	         android:inputType="numberDecimal" />
 
+	     <TextView
+	         android:id="@+id/TextView01"
+	         android:layout_width="wrap_content"
+	         android:layout_below="@id/inputT"
+	         android:layout_height="wrap_content"
+	         android:text="@string/pas"
+	         android:textAppearance="?android:attr/textAppearanceLarge" />
+
 	    <TableLayout
 	        android:id="@+id/TableLayout01"
 	        style="@style/frag2TableLayout"
 	        android:layout_alignLeft="@+id/textView2"
-	        android:layout_below="@+id/inputT" >
+	        android:layout_below="@+id/TextView01" >
 
 	        <TableRow style="@style/frag2TableRow" >
 
@@ -216,10 +232,6 @@
 	                android:text="@string/nothing" />
 	        </TableRow>
 	    </TableLayout>
-
-	   
-
-	  
 
 	</RelativeLayout>
 
