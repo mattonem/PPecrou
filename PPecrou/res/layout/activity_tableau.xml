@@ -8,9 +8,28 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".TableauActivity" >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+    <TableLayout style="@style/frag2TableLayout" > 
+	    <TableRow style="@style/frag2TableRow"> 
+	        <TextView style="@style/frag2HeaderCol" android:text="Credit"/> 
+	        <TextView style="@style/frag2HeaderCol" android:text="Debit"/> 
+	        <TextView style="@style/frag2HeaderCol" android:text="Debit"/> 
+	    </TableRow> 
+	
+	    <TableRow style="@style/frag2TableRow"> 
+	        <TextView style="@style/frag2Col" android:text="124"/> 
+	        <TextView style="@style/frag2Col" android:text="-125"/> 
+	        <TextView style="@style/frag2Col" android:text="-125"/> 
+	    </TableRow> 
+	
+	    <TableRow style="@style/frag2TableRow"> 
+	        <TextView style="@style/frag2Col" android:text="345"/> 
+	        <TextView style="@style/frag2Col" android:text="-120"/> 
+	    </TableRow> 
+	
+	    <TableRow style="@style/frag2TableRow"> 
+	        <TextView style="@style/frag2Col" android:text="245"/> 
+	        <TextView style="@style/frag2Col" android:text="-120"/> 
+	    </TableRow>
+	</TableLayout>
 
 </RelativeLayout>
