@@ -21,7 +21,7 @@ public class TableauActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_tableau);
-		decimalFormat = new DecimalFormat("#.###");
+		decimalFormat = new DecimalFormat("#.#");
 		EditText inputD0 = (EditText) findViewById(R.id.inputD0);
 		EditText inputT = (EditText) findViewById(R.id.inputT);
 		
