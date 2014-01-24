@@ -6,12 +6,12 @@ import java.util.Observer;
 
 public class Formule extends Observable implements Observer {
 
-	private String string1;
-	private String string2;
-	private float param1;
-	private String paramName;
-	private String stringFinal;
-	private DecimalFormat decimalFormat;
+	protected String string1;
+	protected String string2;
+	protected float param1;
+	protected String paramName;
+	protected String stringFinal;
+	protected DecimalFormat decimalFormat;
 
 	public Formule(String string1, float param1, String paramName, String string2, DecimalFormat decimalFormat) {
 		super();
