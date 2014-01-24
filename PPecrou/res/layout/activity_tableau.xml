@@ -42,7 +42,7 @@
 	                style="@style/frag2HeaderCol"
 	                android:text="@string/eurocode" />
 
-	            <TextView
+	            <biz.maxmattone.ppecrou.TextViewObserver
 	                android:id="@+id/cell111"
 	                style="@style/frag2Col"
 	                android:text="@string/nothing" />
@@ -55,12 +55,12 @@
 	                style="@style/frag2HeaderCol"
 	                android:text="@string/cm66" />
 
-	            <TextView
+	            <biz.maxmattone.ppecrou.TextViewObserver
 	                android:id="@+id/cell121"
 	                style="@style/frag2Col"
 	                android:text="@string/nothing" />
 
-	            <TextView
+	            <biz.maxmattone.ppecrou.TextViewObserver
 	                android:id="@+id/cell122"
 	                style="@style/frag2Col"
 	                android:text="@string/nothing" />
@@ -76,12 +76,12 @@
 	                style="@style/frag2HeaderCol"
 	                android:text="@string/cm66" />
 
-	            <TextView
+	            <biz.maxmattone.ppecrou.TextViewObserver
 	                android:id="@+id/cell131"
 	                style="@style/frag2Col"
 	                android:text="@string/nothing" />
 
-	            <TextView
+	            <biz.maxmattone.ppecrou.TextViewObserver
 	                android:id="@+id/cell132"
 	                style="@style/frag2Col"
 	                android:text="@string/nothing" />
@@ -93,12 +93,12 @@
 	                style="@style/frag2HeaderCol"
 	                android:text="@string/eurocode" />
 
-	            <TextView
+	            <biz.maxmattone.ppecrou.TextViewObserver
 	                android:id="@+id/cell141"
 	                style="@style/frag2Col"
 	                android:text="@string/nothing" />
 
-	            <TextView
+	            <biz.maxmattone.ppecrou.TextViewObserver
 	                android:id="@+id/cell142"
 	                style="@style/frag2Col"
 	                android:text="@string/nothing" />
@@ -178,12 +178,12 @@
 	                style="@style/frag2HeaderCol"
 	                android:text="@string/eurocode" />
 
-	            <TextView
+	            <biz.maxmattone.ppecrou.TextViewObserver
 	                android:id="@+id/cell211"
 	                style="@style/frag2Col"
 	                android:text="@string/nothing" />
 
-	            <TextView
+	            <biz.maxmattone.ppecrou.TextViewObserver
 	                android:id="@+id/cell212"
 	                style="@style/frag2Col"
 	                android:text="@string/nothing" />
@@ -195,12 +195,12 @@
 	                style="@style/frag2HeaderCol"
 	                android:text="@string/cm66" />
 
-	            <TextView
+	            <biz.maxmattone.ppecrou.TextViewObserver
 	                android:id="@+id/cell221"
 	                style="@style/frag2Col"
 	                android:text="@string/nothing" />
 
-	            <TextView
+	            <biz.maxmattone.ppecrou.TextViewObserver
 	                android:id="@+id/cell222"
 	                style="@style/frag2Col"
 	                android:text="@string/nothing" />
@@ -216,12 +216,12 @@
 	                style="@style/frag2HeaderCol"
 	                android:text="@string/cm66" />
 
-	            <TextView
+	            <biz.maxmattone.ppecrou.TextViewObserver
 	                android:id="@+id/cell231"
 	                style="@style/frag2Col"
 	                android:text="@string/nothing" />
 
-	            <TextView
+	            <biz.maxmattone.ppecrou.TextViewObserver
 	                android:id="@+id/cell232"
 	                style="@style/frag2Col"
 	                android:text="@string/nothing" />
@@ -233,12 +233,12 @@
 	                style="@style/frag2HeaderCol"
 	                android:text="@string/eurocode" />
 
-	            <TextView
+	            <biz.maxmattone.ppecrou.TextViewObserver
 	                android:id="@+id/cell241"
 	                style="@style/frag2Col"
 	                android:text="@string/nothing" />
 
-	            <TextView
+	            <biz.maxmattone.ppecrou.TextViewObserver
 	                android:id="@+id/cell242"
 	                style="@style/frag2Col"
 	                android:text="@string/nothing" />
