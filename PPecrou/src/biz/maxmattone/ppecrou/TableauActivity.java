@@ -47,7 +47,7 @@ public class TableauActivity extends Activity {
 		formule4.addObserver((TextViewObserver) findViewById(R.id.cell131));
 		d0.addObserver(formule4);
 		// /////////////////////////////////////////////////////////////////
-		Formule formule5 = new Formule("", 2.5f, "d0", "", decimalFormat);
+		Formule formule5 = new Formule("", 2.2f, "d0", "", decimalFormat);
 		formule5.addObserver((TextViewObserver) findViewById(R.id.cell211));
 		d0.addObserver(formule5);
 
